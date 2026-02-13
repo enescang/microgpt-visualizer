@@ -1,5 +1,8 @@
 import { Value } from "../engine/autograd";
 
+const DISPLAY_DECIMALS = 2;
+const TOOLTIP_DECIMALS = 4;
+
 function valToColor(v: number, scale = 0.3): string {
   const t = Math.max(-1, Math.min(1, v / scale));
   if (t < 0) {
@@ -53,9 +56,9 @@ export default function Heatmap({ matrix, rowLabels, colCount, highlightRow, onH
                   <td
                     key={c}
                     style={{ background: bg, color: Math.abs(v) > 0.25 ? "#2a2a25" : "#4a4a42" }}
-                    title={`${rowLabels[r]} dim${c}: ${v.toFixed(4)}`}
+                    title={`${rowLabels[r]} dim${c}: ${v.toFixed(TOOLTIP_DECIMALS)}`}
                   >
-                    {v.toFixed(2)}
+                    {v.toFixed(DISPLAY_DECIMALS)}
                   </td>
                 );
               })}
@@ -78,9 +81,9 @@ export function VectorBar({ values, label }: { values: number[]; label?: string 
             key={i}
             className="vector-cell"
             style={{ background: valToColor(v, maxAbs * 0.8) }}
-            title={`dim${i}: ${v.toFixed(4)}`}
+            title={`dim${i}: ${v.toFixed(TOOLTIP_DECIMALS)}`}
           >
-            {v.toFixed(1)}
+            {v.toFixed(DISPLAY_DECIMALS)}
           </div>
         ))}
       </div>
