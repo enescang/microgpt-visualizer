@@ -58,6 +58,14 @@ export default function App() {
             </button>
           ))}
         </nav>
+        <a 
+          href="https://karpathy.github.io/2026/02/12/microgpt/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="guide-link"
+        >
+          📖 Read Official Guide
+        </a>
         <div className="theme-picker">
           <button
             className={`theme-btn ${theme === "dark" ? "active" : ""}`}

@@ -84,7 +84,8 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 This project is inspired by and based on:
 
-- **[microgpt.py](https://gist.github.com/karpathy/8627fe009c40f57531cb18360106ce95)** by [Andrej Karpathy](https://github.com/karpathy) - The implementation closely mirrors this minimal GPT implementation
+- **[MicroGPT Guide](https://karpathy.github.io/2026/02/12/microgpt/)** by [Andrej Karpathy](https://github.com/karpathy) - Comprehensive guide explaining the implementation
+- **[microgpt.py](https://gist.github.com/karpathy/8627fe009c40f57531cb18360106ce95)** by Andrej Karpathy - The implementation closely mirrors this minimal GPT implementation
 - **[makemore dataset](https://github.com/karpathy/makemore)** by Andrej Karpathy - Training data (names.txt) used for character-level language modeling
 - **[micrograd](https://github.com/karpathy/micrograd)** by Andrej Karpathy - Inspiration for the autograd engine design
 
